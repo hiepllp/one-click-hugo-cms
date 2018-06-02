@@ -6,3 +6,11 @@ pre {
   background-color: var(--grey-1);
   padding: var(--spacing-small);
 }
+
+code {
+  margin: 0 2.5%;
+  padding-left: 10px;
+  font-size: 0.75em;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace
+}

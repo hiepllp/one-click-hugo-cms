@@ -1,31 +1,28 @@
 <!doctype html>
 <html lang="en">
   <!--Adding highlight.js for code highlighting-->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/monokai_sublime.min.css">
     
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.5/clipboard.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.5/clipboard.min.js"></script> 
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script> 
     <script>hljs.initHighlightingOnLoad();</script>
+    {{ partial "head" . }}
+    <body class="sans-serif">
+      {{ partial "nav" . }}
+      {{ block "main" . }}{{ end }} 
+      {{ partial "footer" . }} 
+    </body>
 
-    <script type="text/javascript">
-    // clipboard js init function
-      (function(){
-          new Clipboard('.code');
-      })();
-    // toastr function
-      $(".code").click(function() {
-        toastr.options.positionClass = "toast-top-center";
-        toastr.success('&nbsp; &nbsp; Copied to the clipboard');
-      });
-    </script>
-
-  {{ partial "head" . }}
-  <body class="sans-serif">
-    {{ partial "nav" . }}
-    {{ block "main" . }}{{ end }} 
-    {{ partial "footer" . }} 
-  </body>
+    <script>// clipboard js init function
+        (function(){
+            new Clipboard('.code');
+        })();
+        // toastr function
+        $(".code").click(function() {
+          toastr.options.positionClass = "toast-top-center";
+          toastr.success('Copied to the clipboard');
+        });</script>
 </html>

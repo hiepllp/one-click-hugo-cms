@@ -14,7 +14,7 @@ UserID (guid): PX.Data.PXAccess.GetUserID()
 ```
 CompanyID (int): PX.Data.Update.PXInstanceHelper.CurrentCompany
 ```
-<pre><code id="code-js" data-clipboard-target="#code-js">
+<pre><code class="code" id="code-js" data-clipboard-action="copy" data-clipboard-target="#code-js">
 //js code
 function onWindowResized() {
   if (animationAPI) {

@@ -96,11 +96,11 @@ PO auto closed while not received in full, fixed for Artem Bannikov
 
 \--Case 6
 
-	select Status, ClosedForInvc, ClosedForRcvg,* from tpoPurchOrder where TranNo like '%6552%'
+select Status, ClosedForInvc, ClosedForRcvg,* from tpoPurchOrder where TranNo like '%6552%'
 
-	select Status, ClosedForInvc, ClosedForRcvg,* from tpoPOLine where POKey=6745
+select Status, ClosedForInvc, ClosedForRcvg,* from tpoPOLine where POKey=6745
 
-	select Status, ClosedForInvc, ClosedForRcvg,* from tpoPOLineDist where POLineKey in (select POLineKey from tpoPOLine where POKey=6745)
+select Status, ClosedForInvc, ClosedForRcvg,* from tpoPOLineDist where POLineKey in (select POLineKey from tpoPOLine where POKey=6745)
 
 
 

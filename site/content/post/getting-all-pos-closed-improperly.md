@@ -4,7 +4,7 @@ date: 2018-06-06T07:37:01.419Z
 description: Pulling out all POs closed improperly from MAS
 image: /img/poclosedimproperly.png
 ---
-<pre><code>
+<pre><code class="code" id="code-sql" data-clipboard-action="copy" data-clipboard-target="#code-sql">
 
 use prod_app
 

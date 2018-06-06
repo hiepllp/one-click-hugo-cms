@@ -8,9 +8,8 @@ image: /img/poclosedimproperly.png
 
 use prod_app
 
-\--GETTING ALL POs HAVING QTYTORCV=0 BUT TOTAL QTYREC < QTYORD
-
-\---GETTING ALL POs CLOSED IMPROPERLY
+GETTING ALL POs HAVING QTYTORCV=0 BUT TOTAL QTYREC < QTYORD
+GETTING ALL POs CLOSED IMPROPERLY
 
 select distinct tpo.TranID as PONo, tpo.POKey, tim.ItemID, tpl.Description, tpl.POLineKey, tpl.CloseDate, tpr.TranID as ReceiverNo, tpr.BillOfLadingNo, tpr.UpdateDate, tpd.QtyOrd, tpd.QtyInvcd, tpd.QtyRcvd, tpd.QtyOpenToRcv,tpo.Status as POStatus, tpd.Status as LineStatus --2 Closed, 1 Open
 
@@ -48,7 +47,7 @@ inner join tpoPOLine tpl
 
 	and year(tpo.CreateDate)>=2017
 
-\----------------------------------------------------------	
+----------------------------------------------------------
 
 select distinct tpo.TranID as PONo, tpo.POKey, tim.ItemID, tpl.Description, tpl.POLineKey, tpl.CloseDate, tpr.TranID as ReceiverNo, tpr.BillOfLadingNo, tpr.UpdateDate, tpd.QtyOrd, tpd.QtyInvcd, tpd.QtyRcvd, tpd.QtyOpenToRcv, tpo.Status as POStatus, tpd.Status as LineStatus --2 Closed, 1 Open
 
@@ -94,7 +93,7 @@ PO auto closed while not received in full, fixed for Artem Bannikov
 
 <pre><code class="code" id="code-sql2" data-clipboard-action="copy" data-clipboard-target="#code-sql2">
 
-\--Case 6
+Case 6
 
 select Status, ClosedForInvc, ClosedForRcvg,* from tpoPurchOrder where TranNo like '%6552%'
 
@@ -104,7 +103,7 @@ select Status, ClosedForInvc, ClosedForRcvg,* from tpoPOLineDist where POLineKey
 
 
 
-\--20 should be avail to receive
+20 should be avail to receive
 
 update tpoPurchOrder set Status=1, ClosedForRcvg=0, ClosedForInvc=0 where POKey=6745
 

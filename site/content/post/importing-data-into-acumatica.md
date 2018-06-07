@@ -57,7 +57,7 @@ Commit column checked indicates that the field will be submitted while processin
 
 After defining all the necessary information, you need to add an <Action: Save> to the end of the mapping to make the screen saved all info and finish the data entry.
 
-You can refer more details here - _Target Objects and Fields in Import Scenarios_: _https://help.acumatica.com/(W(28))/Main?ScreenId=ShowWiki&pageid=dca226e4-e566-4066-bf45-5930d06b3e5f _
+You can refer more details here - _Target Objects and Fields in Import Scenarios_: https://help.acumatica.com/(W(28))/Main?ScreenId=ShowWiki&pageid=dca226e4-e566-4066-bf45-5930d06b3e5f 
 
 Now  you're done step 2. Let's start with the last step - _Import by Scenarios_.
 
@@ -75,8 +75,10 @@ Now click Import:
 
 But sadly, it's usually not :). Sometimes because your data in the excel file has some problem with exceeding max data length that one of the fields allows, or some of the configured object like Item Class, Vendor Class, or anything related were incorrect. If the data is wrong, you need to modify the excel template and do the upload again before the next attempt to import, if the issue is at the configuration then nothing to do with the excel file, but that specific configuration to fix.
 
-Above you can see that not all Vendors are imported, and the error mesasge doesn't helful much in telling us what was wrong. Here you need to review the specific failed row, and try to play the guess game. Here I recognized that all the Vendors bearing the MISC Vendor Class were not imported. So it should be something wrong with this Vendor Class. And I see that I set up the Payment method for it as _FedWire_, and the successfull ones are with _Check _(see the second pic on the top of the article). So I made a change to Check.
+Above you can see that not all Vendors are imported, and the error mesasge doesn't helful much in telling us what was wrong. Here you need to review the specific failed row, and try to play the guess game. Here I recognized that all the Vendors bearing the MISC Vendor Class were not imported. So it should be something wrong with this Vendor Class. And I see that I set up the Payment method for it as FedWire, and the successfull ones are with Check (see the second pic on the top of the article). So I made a change to Check.
 
-In reality, you may need to see what's actually wrong with this FedWire and fix it before next attempt of import, instead of just simply changing the class to another option like Check. But for the illustration purpose, I just do this. And surprisingly you can see they all get imported. Green visa approved. Congrats!
+In reality, you may need to see what's actually wrong with this FedWire and fix it before next attempt of import, instead of just simply changing the class to another option like Check. But for the illustration purpose, I just do this. And surprisingly you can see they all get imported. Green visa approved. 
+
+Congrats!
 
 ![alldone](/img/alldone.png)

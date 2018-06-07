@@ -73,7 +73,7 @@ Now click Import:
 
 ![after import](/img/afterimport.png)
 
-But sadly, it's usually not :). Sometimes because your data in the excel file has some problem with exceeding max data length that one of the fields allows, or some of the configured object like Item Class, Vendor Class, or anything related were incorrect. If the data is wrong, you need to modify the excel template and do the upload again before the next attempt to import, if the issue is at the configuration then nothing to do with the excel file, but that specific configuration to fix.
+But sadly, it's usually not :). Sometimes because your data in the excel file has some problems with exceeding max data length that one of the fields allows, or some of the configured objects like Item Class, Vendor Class, or anything related were incorrect. If the data is wrong, you need to modify the excel template and do the upload again before the next attempt to import, if the issue is at the configuration then nothing to do with the excel file, but that specific configuration to fix.
 
 Above you can see that not all Vendors are imported, and the error mesasge doesn't helful much in telling us what was wrong. Here you need to review the specific failed row, and try to play the guess game. Here I recognized that all the Vendors bearing the MISC Vendor Class were not imported. So it should be something wrong with this Vendor Class. And I see that I set up the Payment method for it as FedWire, and the successfull ones are with Check (see the second pic on the top of the article). So I made a change to Check.
 

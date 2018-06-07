@@ -3,11 +3,11 @@ title: Importing data into Acumatica
 date: 2018-06-06T09:58:56.326Z
 description: Some you need to know about Import by Scenario
 ---
-First thing first - Prepare the data, the excel sheet
+First thing first - Prepare the data, the excel sheet.
 
 ![excel](/img/excel.png)
 
-Normally, the template includes 2 sheets, Template and Data, but it can be more, it's not important since you will have a chance to tell the system later which will contain the data you want the system to import to. Likewise, you can have as many columns as you want in the Data sheet, or any sheet of the file. Usually only some key fields will be necessary.
+Normally, the template includes 2 sheets, _Template_ and _Data_, but it can be more, it's not important since you will have a chance to tell the system later which will contain the data you want the system to import to. Likewise, you can have as many columns as you want in the _Data_ sheet, or any sheet of the file. Usually only some key fields will be necessary.
 
 In the below example, we're about to import the Vendor list into the system. As it requires the Vendor Class for each vendor, so you need to define the Vendor Classes first. Here I have some already:
 
@@ -15,7 +15,7 @@ In the below example, we're about to import the Vendor list into the system. As 
 
 Now we need to map all the vendors with the appropriate classes you had in the current sytem, MAS for example. Of course before that, assuming that you already exported the list with basic info such as VendorID, Vendor Name, Payment Terms, Credit Limit, etc.
 
-Now everything is ready for preparation. It's time to upload the template and proceed the import. Enter 'data provider' into the Search bar, you should see the Data Providers menu under Integration Profiles. Select it, and you're ready to go:
+Now everything is ready for preparation. It's time to upload the template and proceed the import. Enter '_data provider_' into the Search bar, you should see the _Data Providers_ menu under Integration Profiles. Select it, and you're ready to go:
 
 ![Data Provider](/img/step0.png)
 
@@ -43,7 +43,7 @@ _**Screen Name:**_ at the pop-up window, navigate like below, then double click 
 
 _**Provider:**_ select the provider name you created last step, mine is **Import Vendors**
 
-**_Provider Object:_** select **Data**, which is the Data sheet in the template
+**_Provider Object:_** select **Data**, which is the _Data_ sheet in the template
 
 _**Sync Type:**_ leave it as default, **Full** mode for the first time import. You may use the latter 2 for incremental import if you need to update the current records which were imported before, or to add a new record to the existing set.
 
@@ -75,7 +75,7 @@ Now click Import:
 
 But sadly, it's usually not :). Sometimes because your data in the excel file has some problem with exceeding max data length that one of the fields allows, or some of the configured object like Item Class, Vendor Class, or anything related were incorrect. If the data is wrong, you need to modify the excel template and do the upload again before the next attempt to import, if the issue is at the configuration then nothing to do with the excel file, but that specific configuration to fix.
 
-Above you can see that not all Vendors are imported, and the error mesasge doesn't helful much in telling us what was wrong. Here you need to review the specific failed row, and try to play the guess game. Here I recognized that all the Vendors bearing the MISC Vendor Class were not imported. So it should be something wrong with this Vendor Class. And I see that I set up the Payment method for it as _FedWire_, and the successfull ones are with _Check _(see the second pci on the top of the article). So I made a change to Check.
+Above you can see that not all Vendors are imported, and the error mesasge doesn't helful much in telling us what was wrong. Here you need to review the specific failed row, and try to play the guess game. Here I recognized that all the Vendors bearing the MISC Vendor Class were not imported. So it should be something wrong with this Vendor Class. And I see that I set up the Payment method for it as _FedWire_, and the successfull ones are with _Check _(see the second pic on the top of the article). So I made a change to Check.
 
 In reality, you may need to see what's actually wrong with this FedWire and fix it before next attempt of import, instead of just simply changing the class to another option like Check. But for the illustration purpose, I just do this. And surprisingly you can see they all get imported. Green visa approved. Congrats!
 

@@ -27,7 +27,7 @@ Next, navigate to the second tab, the **Schema**. Here on the right pane, you sh
 
 ![Step 1](/img/step1.png)
 
-Next click **Save **button to save the Data Provider. You're done at this step.
+Next click **Save** button to save the Data Provider. You're done at this step.
 
 Now we continue with second step - _Import Scenarios_
 

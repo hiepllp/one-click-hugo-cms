@@ -63,7 +63,7 @@ Now  you're done step 2. Let's start with the last step - _Import by Scenarios_.
 
 ![Import by Scenario](/img/step3.png)
 
-This is the easy step, you need to click on **Prepare**, and then **Import** to wait for the system doing the rest. If you're lucky then all the stuff will go through, and green check will show, indicates that all import are finished successfully.
+This is an easy step, you only need to click on **Prepare**, and then **Import** and wait for the system performing the rest. If you're lucky then all the stuff will go through, and green check will show, indicates that all import are finished successfully.
 
 After **Prepare**:
 

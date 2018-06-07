@@ -19,7 +19,7 @@ Now everything is ready for preparation. It's time to upload the template and pr
 
 ![Data Provider](/img/step0.png)
 
-Here you landed on the definition for the data provider, on the _**Name**_, just name it a descriptive name such as **Import Vendors **this case, and select the **Excel Provider** for the _**Provider Type**_.
+Here you landed on the definition for the data provider, on the _**Name**_, just name it a descriptive name such as **Import Vendors** this case, and select the **Excel Provider** for the _**Provider Type**_.
 
 On the **Parameters** tab, you need to click on the **File** on the top right corner to specify the file you want it to be the template. So let's select the file you just prepared in the previous step. Mine is this Vendor list file. After upload completed, you should see the File(1) as the pic shown.
 
@@ -51,7 +51,7 @@ Leave the _**Format Locale**_ and **_Inverse Mapping ID_** empty as we don't nee
 
 Now it comes to the most important part, you need to map the fields in the template with the Vendor screen fields. Basically import by scenario as its name implied, is the way to simulate exactly the steps it does/ behaves while processing user data entry, and such we need to respect when it submit the data for processing and when not. So let's take a look a little bit at how should we define the mapping.
 
-First, click on the **View Screen** button to see **what are the key fields that the system requires** in this Vendor screen,** and where are they located exactly**. You will see that the key fields are marked as red star fields, which are the obligatory ones. So basically it's all the 3 fields we already included it in the template. It means you need to know this screen and necessary fields at the very beginning stage - the data template to prepare. For the 'where', just look at the area the screen showing. Main object would be something Summary, this case is Vendor Summary, which usually contains the Key field, in this case is _Vendor ID,_ and the related object will contain other fields, such as _General Info --> Financial Settings_ will contain _Vendor Class_, which in turns will pull out all the necessary inputs as it was set up in Vendor Class and fill up for the Vendor while importing.
+First, click on the **View Screen** button to see **what are the key fields that the system requires** in this Vendor screen, **and where are they located exactly**. You will see that the key fields are marked as red star fields, which are the obligatory ones. So basically it's all the 3 fields we already included it in the template. It means you need to know this screen and necessary fields at the very beginning stage - the data template to prepare. For the 'where', just look at the area the screen showing. Main object would be something Summary, this case is Vendor Summary, which usually contains the Key field, in this case is _Vendor ID,_ and the related object will contain other fields, such as _General Info --> Financial Settings_ will contain _Vendor Class_, which in turns will pull out all the necessary inputs as it was set up in Vendor Class and fill up for the Vendor while importing.
 
 Commit column checked indicates that the field will be submitted while processing right away, which will load other necessary related info and do the temporal save, which might automatically load other related fields and make the effect to the rest of inputs. Usually the fields with the magnify symbol will do this action.
 

@@ -55,7 +55,7 @@ First, click on the **View Screen** button to see **what are the key fields that
 
 Commit column checked indicates that the field will be submitted while processing right away, which will load other necessary related info and do the temporal save, which might automatically load other related fields and make the effect to the rest of inputs. Usually the fields with the magnify symbol will do this action.
 
-After defining all the necessary information, you need to add an <Action: Save> to the end of the mapping to make the screen saved all info and finish the data entry.
+After defining all the necessary information, you need to add an <<Action: Save>> to the end of the mapping to make the screen saved all info and finish the data entry.
 
 You can refer more details here - _Target Objects and Fields in Import Scenarios_: https://help.acumatica.com/(W(28))/Main?ScreenId=ShowWiki&pageid=dca226e4-e566-4066-bf45-5930d06b3e5f 
 

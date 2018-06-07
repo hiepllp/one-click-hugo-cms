@@ -29,19 +29,19 @@ Next, navigate to the second tab, the **Schema**. Here on the right pane, you sh
 
 Next click **Save **button to save the Data Provider. You're done at this step.
 
-Now we continue with second step - Import Scenarios
+Now we continue with second step - _Import Scenarios_
 
 ![Step 2](/img/step2.png)
 
 At this step you need to define Import Scenarios for Vendors screen. Now search for Import Scenarios in the Search bar. Select it and the main page shows up, lets you specify following: 
 
-_**Name:**_ Enter a descriptive name, I used _Import Vendors_
+_**Name:**_ Enter a descriptive name, I used **Import Vendors**
 
 _**Screen Name:**_ at the pop-up window, navigate like below, then double click the _Vendor_ to select it:
 
 ![Screenname](/img/screenname.png)
 
-_**Provider:**_ select the provider name you created last step, mine is Import Vendors
+_**Provider:**_ select the provider name you created last step, mine is **Import Vendors**
 
 **_Provider Object:_** select **Data**, which is the Data sheet in the template
 
@@ -49,4 +49,34 @@ _**Sync Type:**_ leave it as default, **Full** mode for the first time import. Y
 
 Leave the _**Format Locale**_ and **_Inverse Mapping ID_** empty as we don't need it now.
 
-Now  you're done step 2
+Now it comes to the most important part, you need to map the fields in the template with the Vendor screen fields. Basically import by scenario as its name implied, is the way to simulate exactly the steps it does/ behaves while processing user data entry, and such we need to respect when it submit the data for processing and when not. So let's take a look a little bit at how should we define the mapping.
+
+First, click on the **View Screen** button to see **what are the key fields that the system requires** in this Vendor screen,** and where are they located exactly**. You will see that the key fields are marked as red star fields, which are the obligatory ones. So basically it's all the 3 fields we already included it in the template. It means you need to know this screen and necessary fields at the very beginning stage - the data template to prepare. For the 'where', just look at the area the screen showing. Main object would be something Summary, this case is Vendor Summary, which usually contains the Key field, in this case is _Vendor ID,_ and the related object will contain other fields, such as _General Info --> Financial Settings_ will contain _Vendor Class_, which in turns will pull out all the necessary inputs as it was set up in Vendor Class and fill up for the Vendor while importing.
+
+Commit column checked indicates that the field will be submitted while processing right away, which will load other necessary related info and do the temporal save, which might automatically load other related fields and make the effect to the rest of inputs. Usually the fields with the magnify symbol will do this action.
+
+After defining all the necessary information, you need to add an <Action: Save> to the end of the mapping to make the screen saved all info and finish the data entry.
+
+You can refer more details here - _Target Objects and Fields in Import Scenarios_: _https://help.acumatica.com/(W(28))/Main?ScreenId=ShowWiki&pageid=dca226e4-e566-4066-bf45-5930d06b3e5f _
+
+Now  you're done step 2. Let's start with the last step - _Import by Scenarios_.
+
+![Import by Scenario](/img/step3.png)
+
+This is the easy step, you need to click on **Prepare**, and then **Import **to wait for the system doing the rest. If you're lucky then all the stuff will go through, and green check will show, indicates that all import are finished successfully.
+
+After **Prepare**:
+
+![prepare done](/img/afterprepare.png)
+
+Now click Import:
+
+![after import](/img/afterimport.png)
+
+But sadly, it's usually not :). Sometimes because your data in the excel file has some problem with exceeding max data length that one of the fields allows, or some of the configured object like Item Class, Vendor Class, or anything related were incorrect. If the data is wrong, you need to modify the excel template and do the upload again before the next attempt to import, if the issue is at the configuration then nothing to do with the excel file, but that specific configuration to fix.
+
+Above you can see that not all Vendors are imported, and the error mesasge doesn't helful much in telling us what was wrong. Here you need to review the specific failed row, and try to play the guess game. Here I recognized that all the Vendors bearing the MISC Vendor Class were not imported. So it should be something wrong with this Vendor Class. And I see that I set up the Payment method for it as _FedWire_, and the successfull ones are with _Check _(see the second pci on the top of the article). So I made a change to Check.
+
+In reality, you may need to see what's actually wrong with this FedWire and fix it before next attempt of import, instead of just simply changing the class to another option like Check. But for the illustration purpose, I just do this. And surprisingly you can see they all get imported. Green visa approved. Congrats!
+
+![alldone](/img/alldone.png)

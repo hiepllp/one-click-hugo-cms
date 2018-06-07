@@ -23,7 +23,7 @@ Here you landed on the definition for the data provider, on the _**Name**_, just
 
 On the **Parameters** tab, you need to click on the **File** on the top right corner to specify the file you want it to be the template. So let's select the file you just prepared in the previous step. Mine is this Vendor list file. After upload completed, you should see the File(1) as the pic shown.
 
-Next, navigate to the second tab, the **Schema**. Here on the right pane, you should see all the sheets in the excel just uploaded, then you need to check only on the **Data** sheet, which is the one containing all the fields you want to feed with Vendor info into Acumatica. Hit **Fill Schema Fields** button. It will automatically check all the fields on the selected sheet as defaut. Now click on the **Toggle Activation** button to uncheck all, then manually select only the key fields which the Vendor screen needs (will talk to it later below), which are the VendorId, Description (Vendor Name), and Vendor Class.
+Next, navigate to the second tab, the **Schema**. Here on the right pane, you should see all the sheets in the excel just uploaded, then you need to check only on the **Data** sheet, which is the one containing all the fields you want to feed with Vendor info into Acumatica. Hit **Fill Schema Fields** button. It will automatically check all the fields on the selected sheet as defaut. Now click on the **Toggle Activation** button to uncheck all, then manually select only the key fields which the Vendor screen needs (will talk about it later below), which are the VendorId, Description (Vendor Name), and Vendor Class.
 
 ![Step 1](/img/step1.png)
 

@@ -7,7 +7,7 @@
       <p>Read in {{ .ReadingTime }} minutes</p>
     </div>
     <div class="cms mw7">
-      <p>{{ .Description }}</p>
+      <h2>{{ .Description }}</h2>
       {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
       {{ .Content }}
     </div>

@@ -27,6 +27,9 @@
     font-size: .875rem;
   }
 
+	& p {
+		max-width: 52rem;
+	}
 	/* Images */
 	& img {
 		display: block;

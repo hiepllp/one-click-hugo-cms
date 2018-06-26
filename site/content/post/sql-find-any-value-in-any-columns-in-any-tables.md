@@ -7,8 +7,6 @@ DECLARE @SearchStr INT = 10810;
 
 \--DECLARE @SearchStr NVARCHAR(100) = 'abc';
 
-
-
 CREATE TABLE #Results
 
 \    (
@@ -19,19 +17,13 @@ CREATE TABLE #Results
 
 \    );
 
-
-
 SET NOCOUNT ON;
-
-
 
 DECLARE @TableName NVARCHAR(256) = '',
 
 \    @ColumnName NVARCHAR(128)
 
-\--@SearchStr2 NVARCHAR(128) = '%' + @SearchStr + '%'
-
-\    
+\--@SearchStr2 NVARCHAR(128) = '%' + @SearchStr + '%'    
 
 WHILE @TableName IS NOT NULL
 
@@ -50,8 +42,6 @@ WHILE @TableName IS NOT NULL
 \    AND OBJECTPROPERTY(OBJECT_ID(QUOTENAME(TABLE_SCHEMA) + '.' + QUOTENAME(TABLE_NAME)), 'IsMSShipped') = 0
 
 \    );
-
-
 
 \    WHILE (@TableName IS NOT NULL)
 
@@ -73,17 +63,13 @@ WHILE @TableName IS NOT NULL
 
 \    );
 
-
-
 \    IF @ColumnName IS NOT NULL
 
 \    BEGIN
 
 \    INSERT  INTO #Results
 
-\    EXEC ('SELECT ''' + @TableName + '.' + @ColumnName + ''', LEFT(' + @ColumnName + ', 3630) 
-
-										FROM ' + @TableName + ' (NOLOCK) ' + ' WHERE ' + @ColumnName + ' = ' + @SearchStr --' LIKE ' + @SearchStr2
+\    EXEC ('SELECT ''' + @TableName + '.' + @ColumnName + ''', LEFT(' + @ColumnName + ', 3630) FROM ' + @TableName + ' (NOLOCK) ' + ' WHERE ' + @ColumnName + ' = ' + @SearchStr --' LIKE ' + @SearchStr2
 
 \    );
 
@@ -92,8 +78,6 @@ WHILE @TableName IS NOT NULL
 \    END; 
 
 \    END;
-
-
 
 SELECT  ColumnName,
 

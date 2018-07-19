@@ -35,10 +35,12 @@ Grab a cup of coffee or beer, and just type in Receipt in Search Bar, what you n
 
 So, back to the Sales Order Entry screen, I was able to save the AM42FM with ordered qty 2, and create a drop shipment to other tenant.
 
-Oh it works, I'm happy in 5 mins, but there are some paradox here:
+![eventually it works](/img/finally.jpg)
+
+Oh it eventually works, I'm happy in 5 mins, but there are some paradox here:
 
 * Since I intend to make the drop-shipment, so why do I need the stock available in my tenant in order to do so?
 
 You might ask yourself this question, as I'm not alone: _https://www.timrodman.com/augforums/acumatica-distribution-modules/creating-a-drop-shipment/_
 
-## Happy debugging!
+## Happy (not angry) debugging!

@@ -1,5 +1,5 @@
 ---
-title: Business Events to capture data change in near-realtime fashion
+title: Business Events to capture data change in near real-time fashion
 date: 2018-12-21T02:47:30.222Z
 description: >-
   Scenario: Update Care and Inventory Manager item status once it's running out.
